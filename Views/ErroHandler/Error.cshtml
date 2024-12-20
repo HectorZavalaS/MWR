@@ -1,0 +1,40 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<div class="card">
+    <div class="hr" id="hr-top"></div>
+
+    <div class="message-error">
+        <!--Tags to show element of left side of the card-->
+        <div class="left-S">
+
+            <div class="Title" id="tit-1">ERROR</div>
+
+            <div class="Title" id="tit-2">Something went wrong...</div>
+
+            <!--Tags to create a form-->
+            <p id="message" class="card-body">
+                We are sorry, an unexpected error has occurred during the procedure of your request.
+                Please, reload the website, but if the problem persists, close the browser and try it again.
+
+                <br /><br />
+                <span style="font-size: 10pt;"><b>Note:</b> If you consider it necessary, you can send an email to The SIIX EMS IT Department.</span>
+            </p>
+
+        </div>
+
+        <!--Tags to show elements of Right Side-->
+        <div class="right-S">
+            <img src="~/Assets/world.png" />
+        </div>
+    </div>
+
+    <div class="hr" id="hr-bot"></div>
+</div>
+
+@Styles.Render("~/Content/Error_Screen.css")

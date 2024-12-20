@@ -1,0 +1,70 @@
+﻿@using MWR.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log In";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<div class="card">
+    <!--Tags to show element of left side of the card-->
+    <div class="left-S">
+        <div class="hr" id="hr-top"></div>
+
+        <img class="img-logo" src="~/Assets/logo-s.png" />
+
+        <div class="Title" id="tit-1">LOG IN</div>
+
+        <!--Tags to create a form-->
+        <section id="loginForm" class="card-body">
+
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal form-body", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger", @id = "failed-login-warning" })
+
+                <div class="row inp" id="inp-user">
+                    <i class="bi bi-envelope"></i>
+                    <div class="col col-inp">
+                        @Html.LabelFor(m => m.Email, new { @class = "control-label Title", @id = "tit-2" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-sm", @id = "username", @placeholder = "Enter Your Username", @name = "E-Mail" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-warning", @id = "missed-value-1" })
+                    </div>
+                </div>
+
+                <div class="inp row" id="inp-user">
+                    <i class="bi bi-key"></i>
+                    <div class="col col-inp">
+                        @Html.LabelFor(m => m.Password, new { @class = "Title", @id = "tit-3" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-sm", @id = "password", @placeholder = "Enter Your Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-warning", @id = "missed-value-2" })
+                    </div>
+                </div>
+
+                <div class="row row-btn">
+                    <input type="submit" value="Log In" class="btn btn-primary" id="btn-log-in"
+                           data-bs-toggle="modal" data-bs-target="#static-loading-img" />
+                </div>
+            }
+        </section>
+        <div class="hr" id="hr-bot"></div>
+    </div>
+
+    <!--Tags to show elements of Right Side-->
+    <div class="right-S">
+        <div class="rec-top"></div>
+        <img class="c-img-logo" src="~/Assets/Logo-Minimalista.png" />
+        <div class="rec-bot"></div>
+    </div>
+
+</div>
+
+@RenderPage("~/Views/Report/Modal_Loading.cshtml")
+
+ 
+@Styles.Render("~/Content/LogIn/css")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/LoginJS")
+    @Scripts.Render("~/bundles/Text_LoginJS")
+}

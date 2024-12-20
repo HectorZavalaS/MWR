@@ -1,0 +1,78 @@
+﻿
+body {  font-family: "Roboto";  display: block;}
+
+/*Navbar brand starts*/
+.navbar {
+    /*Padding and Margin Rules*/
+    padding: 0px;       margin: 0px;
+    /*Font Color Rules*/
+    color: white;
+}
+
+/*Navbar tittle-nav-brand Starts*/
+.navbar-brand {
+    /*Display Rules*/
+    display: flex;
+    align-items: center;
+    /*Padding and Margin Rules*/
+    padding: 0px;
+    margin: 0px;
+}
+
+.tittle-nav-brand, .tittle-nav-screen {
+    font-size: 34pt;
+}
+
+.img-logo-nav {
+    width: 4rem;
+}
+/*Navbar tittle-nav-brand Ends*/
+
+.nav-coll-element{
+    justify-content: flex-end;
+}
+
+/*Navbar User Data starts*/
+.data-user {
+    text-align: end;
+}
+
+.name-user{
+    font-size: 16pt;
+}
+
+#btn-log-in{
+    font-size: 11pt;
+    padding: 0px;
+}
+/*Navbar User Data ends*/
+/*Navbar brand ends*/
+/*********************************************************************************/
+/*body-content starts*/
+/*Body Starts*/
+.message {
+    /*Font Rules*/
+    font-size: larger;
+    /*Margin and Padding Rules*/
+    margin-top: 3%;
+    margin-bottom: 3%;
+    /*Display Rules*/
+    text-align: justify;
+}
+/*Body Ends*/
+
+
+@media screen and (min-width: 1065px){
+    .data-user {width: 25rem;}
+    .tittle-nav-brand, .tittle-nav-screen {font-size: 28pt;}
+}
+
+@media screen and (max-width: 999px){
+    .data-user {width: 100%;}
+    .message {font-size: medium;    }
+}
+
+@media screen and (max-width: 650px){
+    
+    .tittle-nav-brand, .tittle-nav-screen {font-size: 20pt;}
+}

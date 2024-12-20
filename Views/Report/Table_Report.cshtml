@@ -1,0 +1,141 @@
+﻿@using MWR.Models
+@{
+    StoreIn storeIn = (StoreIn)ViewData["StoreIn"];
+    MaterialOut mout = (MaterialOut)ViewData["Material_Out"];
+    FGInfo fg = (FGInfo)ViewData["FG"];
+    String date = ViewData["Date"].ToString();
+
+}
+
+<table class="table table-report" id="table-report">
+    <thead>
+        <tr>
+            <th scope="colgroup" colspan="3" class="tittle-table-month" id="date-month">@date</th>
+        </tr>
+        <tr class="tittle-table-data">
+            <th class="table-data">Process</th>
+            <th class="table-data">Transactions</th>
+            <th class="table-data">Batch Number</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr class="table-row-data" id="table-row-data-1">
+            <td class="table-data process-table-data td-body">Store In</td>
+            <td class="table-data transaction-table-data td-body">Receiving</td>
+            <td class="table-data batch-table-data td-body" id="store-1">@storeIn.receiving.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-2">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">PCK (Tray)</td>
+            <td class="table-data batch-table-data td-body" id="store-2">@storeIn.pck.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-3">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">China Material</td>
+            <td class="table-data batch-table-data td-body" id="store-3">@storeIn.chinaM.ToString("N0")</td>
+        </tr>
+
+        <tr class="tittle-table-data row-space-table" id="table-row-data-4">
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body batch-table-data" id="store-4">@storeIn.total.ToString("N0")</td>
+        </tr>
+
+
+        <tr class="table-row-data" id="table-row-data-5">
+            <td class="table-data process-table-data td-body">Material Out</td>
+            <td class="table-data transaction-table-data td-body">Free Pick & Sub Inventory SMT</td>
+            <td class="table-data batch-table-data td-body" id="mout-1">@mout.freePSMT.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-6">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">SMT Picking</td>
+            <td class="table-data batch-table-data td-body" id="mout-2">@mout.smtP.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-7">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">ASSY Picking</td>
+            <td class="table-data batch-table-data td-body" id="mout-3">@mout.assyP.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-8">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">Free Pick & Sub Inventory ASSY</td>
+            <td class="table-data batch-table-data td-body" id="mout-4">@mout.freePASSY.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-9">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">Total Picking for Production </td>
+            <td class="table-data batch-table-data td-body" id="mout-5">@mout.totalPP.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-10">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">Tray CONS Transactions</td>
+            <td class="table-data batch-table-data td-body" id="mout-6">@mout.TrayCons.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-11">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">Return Transaction SMT -> WH</td>
+            <td class="table-data batch-table-data td-body" id="mout-7">@mout.smtTOwh.ToString("N0")</td>
+        </tr>
+
+        <tr class="tittle-table-data row-space-table" id="table-row-data-12">
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body batch-table-data" id="mout-8">@mout.totalTrans.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-13">
+            <td class="table-data process-table-data td-body">FG</td>
+            <td class="table-data transaction-table-data td-body">OWH - In</td>
+            <td class="table-data batch-table-data td-body" id="FG-1">@fg.owhIN.ToString("N0")</td>
+        </tr>
+
+        <tr class="table-row-data" id="table-row-data-14">
+            <td class="table-data process-table-data td-body"></td>
+            <td class="table-data transaction-table-data td-body">OWH - Out</td>
+            <td class="table-data batch-table-data td-body" id="FG-2">@fg.owhOUT.ToString("N0")</td>
+        </tr>
+
+        <tr class="tittle-table-data row-space-table">
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body"></td>
+            <td class="table-data td-body"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="table-data" style="margin: 0;text-align: right;padding-right: 0px;">
+
+                @using (Html.BeginForm("downloadR", "Report"))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="date" />
+                    <input type="hidden" name="storeIn" />
+                    <input type="hidden" name="mout" />
+                    <input type="hidden" name="fgInfo" />
+                    <button class="btn btn-success" id="btn-dwld" type="submit">
+                        Download <i class="bi bi-download"></i>
+                    </button>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+
+    </tr>
+</table>
+
+<br />

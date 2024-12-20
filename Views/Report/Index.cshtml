@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Report Warehouse Monthly";
+
+    var user = ViewData["UserD"] as MWR.Models.validate_user_Result;
+}
+
+<!--Space to put a NavBar-->
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" id="navar-1">
+    <div class="container-fluid">
+        <a href="~/Report/" class="navbar-brand">
+            <span class="Title tittle-nav-brand">SIIX</span>
+            <img class="img-logo-nav" id="img-logo-nav" src="~/Assets/Logo-M-W.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-coll-element" id="navbarScroll">
+            <div class="Title tittle-nav-screen" id="tittle-nav-screen">Monthly Warehouse Report</div>
+            <div class="row data-user">
+                <div class="Title name-user">@user.se_name</div>
+                @using (Html.BeginForm("LogOut", "Account"))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="submit" value="Log Out" class="btn" id="btn-log-in" />
+                }
+            </div>
+        </div>
+    </div>
+</nav>
+<!--End of NavBar-->
+<!--Starts body content-->
+<div class="container body-content">
+    <div class="message" id="message-report">
+        Clicking on <a href="/Report/">Current Report</a> you can see the Monthly Report of Warehouse, corresponding to the last month.
+        If you wanna see another month report, click on <a href="#" data-bs-toggle="modal" data-bs-target="#F-REPORT">
+            see another report
+        </a>.
+
+        @RenderPage("~/Views/Report/Modal_Report.cshtml")
+        @RenderPage("~/Views/Report/Modal_Loading.cshtml")
+        @RenderPage("~/Views/Report/Modal_Error_Find.cshtml")
+    </div>
+
+    <div class="space-report ">
+        @RenderPage("~/Views/Report/Table_Report.cshtml")
+    </div>
+
+</div>
+<!--Ends body content-->
+
+@Styles.Render("~/Content/Report/css")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/ListBox_Setup")
+    @Scripts.Render("~/bundles/Clean_Modal")
+    @Scripts.Render("~/bundles/Add_Year")
+    @Scripts.Render("~/bundles/Add_Month")
+    @Scripts.Render("~/bundles/Enabled_Btn")
+    @Scripts.Render("~/bundles/Loading_Modal")
+    @Scripts.Render("~/bundles/download_PDF")
+}

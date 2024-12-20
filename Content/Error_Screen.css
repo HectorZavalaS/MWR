@@ -1,0 +1,121 @@
+﻿
+body {
+    font-family: 'Roboto';
+}
+
+.left-S {
+    padding: 2%;
+    width: 60%;
+}
+
+.right-S {
+    width: 40%;
+}
+
+#tit-1 {
+    color: rgb(248, 84, 84);
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+#tit-2 {
+    font-size: 25pt;
+    font-weight: 600;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.hr {
+    height: 20px;
+    width: 100%;
+}
+
+#hr-bot {
+    background: rgb(248, 84, 84);
+}
+
+#hr-top {
+    background: rgb(248, 231, 84);
+}
+
+.right-S img {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+@media screen and (min-width: 851px) and (orientation: landscape) {
+    body {
+        /*Padding Rules*/
+        padding: 0px;
+        margin: 0px;
+        /*Display Rules*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        /*Size Rules*/
+        width: 50rem;
+        /*Effects Rules*/
+        box-shadow: 16px 16px 32px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        border: none;
+        /*Display Rules*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message-error {
+        display: flex;
+    }
+
+    #tit-2 {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+}
+    
+
+@media screen and (min-width: 0px ) and (max-width: 915px) and (orientation: landscape){
+    .card{width: 100%; height: 100%;}
+    .message-error{display: flex; height: 80%}
+
+    #hr-top, #hr-bot{   height: 3%;   }
+    #hr-top{ margin-top: 3.5%}
+    #hr-bot{ margin-bottom: 2.5%;}
+    #tit-2 {    margin-top: 3%; margin-bottom: 3%;  }
+    .right-S img{ width: 75%}
+}
+
+@media screen and (min-width: 0px) and (max-width: 415px) and (orientation: portrait){
+    .card {width: 100%;}
+    .message-error{width: 100%; height: 80%;}
+    #hr-top{margin-top: 5%;}
+    .left-S{height: 50%; width: 100%;}
+    #tit-1{margin-top: 10%;}
+    #message{font-size: 14pt;}
+    .right-S{height: 45%;   width: 100%;}    
+    .right-S img {  opacity: 0.5;   width: 60%; margin-left: 20%;   margin-top: 20%;    }
+}
+
+@media screen and (min-width: 416px) and (max-width: 550px) and (orientation: portrait){
+    .card {height: 100%; width: 100%;}
+    .message-error{width: 100%; height: 85%;}
+    #hr-top{margin-top: 5%;}
+    .left-S{height: 50%; width: 100%;}
+    #message{font-size: 14pt;}
+    .right-S{height: 50%; width: 100%; display: flex; align-items: center; justify-content: center;}
+    .right-S img {  opacity: 0.5;   width: 40%;}
+}
+
+@media screen and (min-width: 551px) and (orientation: portrait){
+    body{display: flex; align-items: center; justify-content: center;}
+    .card {height: 80%; width: 90%; box-shadow: 16px 16px 32px 10px rgba(0, 0, 0, 0.25);}
+    .message-error{width: 100%; height: 80%;}
+    #hr-top{margin-top: 10%;}
+    .left-S{height: 50%; width: 100%;}
+    #message{font-size: 16pt;}
+    .right-S{height: 50%; width: 100%; display: flex; align-items: center; justify-content: center;}
+    .right-S img {  opacity: 0.5;   width: 40%; }
+}

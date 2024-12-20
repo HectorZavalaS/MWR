@@ -1,0 +1,338 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    /*Padding Rules*/
+    padding: 0px;       margin: 0px;
+    /*Display Rules*/
+    display: flex;      align-items: center;        justify-content: center;
+}
+
+.col-inp{
+    margin-left: 0%;
+}
+
+@media screen and (min-width: 851px) {
+    .card {
+        /*Size Rules*/
+        width: 50rem;
+        /*Effects Rules*/
+        box-shadow: 16px 16px 32px 10px rgba(0, 0, 0, 0.25);        border-radius: 7px;     border: none;
+        /*Display Rules*/
+        display: flex;      flex-direction: row;
+    }
+    
+    .left-S {
+        /*Size Rules*/
+        width: 60%;
+        /*Padding & Margin Rules*/
+        padding: 0px;
+    }
+
+    /*Rules to handle class-hr elements */
+    .hr {
+        /*Margin and Padding Rules*/
+        margin-top: 1.5rem;     margin-bottom: 1.5rem;
+        /*Size Rules*/
+        height: 15px;
+    }
+
+    #hr-top {   background: rgba(120, 117, 249, 0.75);      }
+
+    #hr-bot {   background: rgba(248, 231, 84, 0.75);   }
+    /*End*/
+
+    .img-logo {
+        /*Size Rules*/
+        width: 40%;
+        /*Margin & Padding Rules*/
+        margin-left: 7%;
+    }
+
+    /*General Rules for Tittles*/
+    .Title {    font-family: "Roboto";  font-weight: 400;}
+
+    #tit-1 {
+        /*Font Rules*/
+        font-size: 24pt;    font-weight: 500;
+        /*Margin & Padding Rules*/
+        margin-left: 7%;    margin-top: 2rem;
+    }
+
+    /*INPUT SECTION*/
+    .card-body {
+        /*Margin & Padding Rules*/
+        padding: 0px;       padding-right: 5%;      margin-left: 8%;
+    }
+
+    #inp-user {
+        /*Margin & Padding Rules*/
+        padding: 0px;       margin: 0px;        margin-top: 5%;     margin-right: 5%;
+        /*Display Rules*/
+        align-items: center;
+    }
+
+    #tit-2 {
+        /*Font Rules*/
+        font-size: 14pt;
+    }
+
+    /*Rules to modify icons*/
+    .bi-envelope, .bi-key {
+        /*Color Rules*/
+        color: rgba(121, 114, 114, 1);
+        /*Size Rules*/
+        font-size: 175%;
+        width: 10%;
+        height: 10%;
+        /*Position Rules*/
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #inp-user:focus-within .bi-envelope, #inp-user:focus-within #tit-2 {
+        color: rgba(120, 117, 249, 0.75);
+    }
+
+    #inp-user:focus-within .bi-key, #inp-user:focus-within #tit-3 {
+        color: rgba(120, 117, 249, 0.75);
+    }
+
+    /*General Rules for Inputs*/
+    #username, #password {
+        /*Margin & Padding Rules*/
+        margin: 0px;
+        /*Size Rules*/
+        min-width: -webkit-fill-available;
+        /*Decoration/Border Rules*/
+        border: none;
+        border-radius: 0px;
+        border-bottom: 2px solid gray;
+    }
+        /*Rules to handle inputs when you interact with them*/
+        #username:focus, #password:focus {
+            /*Border Decoration Rules*/
+            border: none;
+            border-radius: 0px;
+            border-bottom: 2px solid rgba(120, 117, 249, 0.75);
+        }
+
+    /*Row that contains a login-button*/
+    .row-btn {
+        /*Padding & Margin Rules*/
+        margin-right: 5%;
+        margin-top: 5%;
+        /*Display Rules*/
+        justify-content: flex-end;
+    }
+
+    #btn-log-in {
+        /*Size Rules*/
+        width: 8rem;
+        /*Border Rules*/
+        border-radius: 19px;
+    }
+
+
+    /*RIGHT SIDE RULES*/
+
+    .right-S {
+        /*Size Rules*/
+        width: 40%;
+        /*Background Rules*/
+        background-attachment: fixed;       background-image: url(../../Assets/SIIX.png);       background-position-x: right;
+        background-position-y: center;      background-size: contain;
+        /*Overflow Rules*/
+        overflow: hidden;
+    }
+
+    .rec-top {
+        /*Sise Rules*/
+        height: 40%;
+        /*Appereance Rules*/
+        background: rgba(248, 231, 84, 0.75);
+    }
+
+    .rec-bot {
+        /*Size Rules*/
+        height: 60%;
+        /*Appereance Rules*/
+        background: rgba(120, 117, 249, 0.5);
+    }
+
+    .c-img-logo {
+        /*Position Rules*/
+        position: absolute;
+        left: 70%;
+        top: 25%;
+    }
+
+}
+
+
+@media screen and (min-width: 1px) and (max-width: 850px){
+    .card {
+        border: 0px solid gray;
+        /*Size Rules*/
+        width: 100%;    height: 100%;
+        /*Overflow Rules*/
+        overflow: scroll;
+    }
+
+    .left-S {
+        /*Size Rules*/
+        width: 100%;        height: 100%;
+        /*Padding & Margin Rules*/
+        padding: 0px;
+        /*Display Rules*/
+        display: flex;      flex-direction: column;     align-items: center;
+        /*Overflow Rules*/
+        overflow: scroll;
+
+        /*Background Rules*/
+        background-attachment: fixed;       background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url(../../Assets/SIIX.png);
+        background-position-x: right;       background-position-y: center;          background-size: cover;
+    }
+
+    /*Rules to handle class-hr elements */
+    .hr {
+        /*Margin and Padding Rules*/
+        margin-top: 10%;       margin-bottom: 10%;
+        /*Size Rules*/
+        height: 20px;           width: 100%;
+    }
+
+    #hr-top {   background: rgba(120, 117, 249, 0.75);  }
+
+    #hr-bot {   background: rgba(248, 231, 84, 0.75);   }
+
+    .img-logo {
+        /*Size Rules*/
+        width: 50%;
+        /*Margin & Padding Rules*/
+        justify-content: center;
+    }
+
+    /*General Rules for Tittles*/
+    .Title {
+        font-family: "Roboto";
+    }
+
+    /*INPUT SECTION*/
+    .card-body, .form-body {
+        /*Size Rules*/
+        width: 90%;
+        /*Display Rules*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inp-user {
+        color: white;
+        /*Margin & Padding Rules*/
+        padding: 0px;       margin-top: 7%;     margin-right: 5%;
+        /*Dispay Rules*/
+        align-items: center;
+        /*Size Rules*/
+        width: -webkit-fill-available;
+    }
+
+    #tit-2, #tit-3 {
+        /*Font Rules*/
+        font-size: 18pt;
+    }
+
+    /*Rules to modify icons*/
+    .bi-envelope, .bi-key {
+        /*Color Rules*/
+        color: white;
+        /*Size Rules*/
+        font-size: 175%;        width: 10%;     height: 10%;
+        /*Position Rules*/
+        margin: 0px;        padding: 0px;
+    }
+
+    /*Rule to modify icon design when the user focus on the respective input*/
+    #inp-user:focus-within .bi-envelope, #inp-user:focus-within #tit-2 {
+        color: rgba(130, 142, 244, 1);
+    }
+    /*Rule to modify icon design when the user focus on the respective input*/
+    #inp-user:focus-within .bi-key, #inp-user:focus-within #tit-3 {
+        color: rgba(130, 142, 244, 1);
+    }
+
+    /*General Rules for Inputs*/
+    #username, #password {
+        /*Margin & Padding Rules*/
+        margin: 0px;
+        /*Size Rules*/
+        min-width: -webkit-fill-available;
+        /*Decoration/Border Rules*/
+        border: none;       border-radius: 0px;     border-bottom: 2px solid gray;
+    }
+
+    /*Rules to handle inputs when you interact with them*/ 
+    #username:focus, #password:focus {
+        /*Border Decoration Rules*/
+        border: none;       border-radius: 0px;     border-bottom: 2px solid rgba(130, 142, 244, 1);
+
+    }
+
+    /*Row that contains a login-button*/
+    .row-btn {
+        /*Padding & Margin Rules*/
+        margin-right: 5%;       margin-top: 5%;
+        /*Display Rules*/
+        justify-content: flex-end;
+    }
+
+    #btn-log-in {
+        /*Size Rules*/
+        width: 8rem;
+        /*Border Rules*/
+        border-radius: 19px;
+        /*Padding & Margin Rules*/
+        margin-top: 60%;
+    }
+
+
+    /*RIGHT SIDE RULES*/
+
+    .c-img-logo, .rec-bot, .rec-top, .right-S, #tit-1 {
+        height: 0px;
+        overflow: hidden;
+    }
+}
+
+
+/*It's neccessary not to put a background in these elements, due to we just want to
+    see the loading icon.*/
+.modal-content-loading, .modal-dialog-loading, .modal-body-loading {
+    background: none;
+}
+
+/*Rules to modify loading icon/gif.*/
+/*This symbols is always in the midle of the screen, that's why we n*/
+.loader-gif {
+    opacity: 0.6;
+    filter: hue-rotate(200deg);
+    position: fixed;
+}
+
+@media screen and (max-width: 465px) {
+    .loader-gif {
+        width: 10%;
+        left: 45%;
+        top: 45%;
+    }
+}
+
+@media screen and (min-width: 466px) {
+    .loader-gif {
+        width: 14%;
+        left: 43%;
+        top: 43%;
+    }
+}

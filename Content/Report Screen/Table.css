@@ -1,0 +1,47 @@
+﻿/*These rules give format to the table in report screen.*/
+
+.table {
+    /*Font Rules*/
+    text-align: center;     font-family: "Roboto";
+    /*Spacing Rules*/
+    margin-bottom: 2%;
+}
+
+.table tr { border: 5px solid white;}
+
+th.tittle-table-month {
+    /*Font Rules*/
+    font-size: 24pt;        font-weight: 500;       color: white;
+    /*Background Rules*/
+    background: rgba(130, 142, 244, 1);
+}
+
+tr.tittle-table-data {  background: rgba(130, 142, 244, 0.38);  }
+
+td.table-data, th.table-data {
+    /*Font Rules*/
+    color: rgba(74, 71, 71, 1);         font-weight: 600;      font-size: 14pt;
+    /*Background Rules*/
+    background: transparent;
+}
+
+tr.table-row-data { background: rgba(130, 142, 244, 0.15);  }
+
+td.transaction-table-data {
+    /*Font Rules*/
+    font-weight: 100;       color: rgba(0, 0, 0, 1);        text-align: left;
+    /*Padding & Margin Rules*/
+    padding-left: 10%;
+}
+
+
+/*If the screen is too small, like an ipad, these rules need to change, allowing the design keeps responsive*/
+@media screen and (max-width: 650px) {
+    th.tittle-table-month {font-size: 18pt;}
+
+    td.table-data, th.table-data {font-size: 11pt;}
+
+    td.td-body {    font-size: 10pt;    }
+
+    td.transaction-table-data {  padding-left: 7%;  }
+}
